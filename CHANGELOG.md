@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.6.4] - 2026-01-17
+
+### Fixed
+- Installation on WSL2/non-TTY terminals now works correctly - detects non-interactive stdin and falls back to global install automatically
+- Installation now verifies files were actually copied before showing success checkmarks
+- Orphaned `gsd-notify.sh` hook from previous versions is now automatically removed during install (both file and settings.json registration)
+
+## [1.6.3] - 2025-01-17
+
+### Added
+- `--gaps-only` flag for `/gsd:execute-phase` — executes only gap closure plans after verify-work finds issues, eliminating redundant state discovery
+
 ## [1.6.2] - 2025-01-17
 
 ### Changed
@@ -913,7 +925,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - YOLO mode for autonomous execution
 - Interactive mode with checkpoints
 
-[Unreleased]: https://github.com/glittercowboy/get-shit-done/compare/v1.6.2...HEAD
+[Unreleased]: https://github.com/glittercowboy/get-shit-done/compare/v1.6.4...HEAD
+[1.6.4]: https://github.com/glittercowboy/get-shit-done/releases/tag/v1.6.4
+[1.6.3]: https://github.com/glittercowboy/get-shit-done/releases/tag/v1.6.3
 [1.6.2]: https://github.com/glittercowboy/get-shit-done/releases/tag/v1.6.2
 [1.6.1]: https://github.com/glittercowboy/get-shit-done/releases/tag/v1.6.1
 [1.6.0]: https://github.com/glittercowboy/get-shit-done/releases/tag/v1.6.0
